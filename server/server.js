@@ -22,7 +22,7 @@ const cakeRoutes = require('./routes/cake');
 const userRoutes = require('./routes/users');
 
 app.use('/api/cake', cakeRoutes);
-app.use('/api/users', userRoutes);
+app.use('/api/usersCake', userRoutes);
 app.use('/api/data', (req, res) => {
     res.json({message: 'Hello from server'});
 })
