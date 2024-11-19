@@ -6,25 +6,26 @@ import Home from './pages/home';
 import About from './pages/about';
 import Contact from './pages/contact';
 import Services from './pages/services';
-import CakesList from './pages/cake-list';
-import Register from './register';
+import CakesList from './pages/cale-list';
+import Register from './pages/register';
 import Login from './pages/login';
+import CakeDetails from './pages/cake-details';
 
 function App() {
 
   const [user, setUser] = useState(() => {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('username');
-    return token && username ? {username} : null;
+    return token && username ? { username } : null;
   });
 
   useEffect(() => {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('username');
-      if(token && username) {
-        setUser({username})
-      }
-    }, [])
+    if (token && username) {
+      setUser({ username });
+    }
+  }, []);
 
   const handleLogout = () => {
     localStorage.removeItem('token');
@@ -88,9 +89,12 @@ function App() {
         <Route path="/about" element = {<About/>} />
         <Route path="/contact" element = {<Contact />} />
         <Route path="/services" element = {<Services />} />
-        <Route path="/projects" element = { <CakesList />} />
+        <Route path="/cakes" element = { <CakesList />} />
+        <Route path="/cake-details" element = { <CakeDetails />} />
+        <Route path="/cake-details/:id" element = { <CakeDetails />} />
         <Route path="/register" element = { <Register />} />
-        <Route path="/login" element = { <Login setUser={setUser}/>} />
+        <Route path="/login" element = { <Login setUser={setUser} />} />
+
       </Routes>
     </Router>
     </>
