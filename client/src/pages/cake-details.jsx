@@ -37,7 +37,6 @@ const CakeDetails = () => {
 
                     const data = await response.json();
                     setCake({
-                        size: data.size,
                         cakeFlavour: data.cakeFlavour,
                         frostingFlavour: data.frostingFlavour,
                         size: data.size,

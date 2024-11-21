@@ -6,8 +6,8 @@ import Home from './pages/home';
 import About from './pages/about';
 import Contact from './pages/contact';
 import Services from './pages/services';
-import CakesList from './pages/cale-list';
-import Register from './pages/register';
+import CakesList from './pages/cake-list';
+import Register from './register';
 import Login from './pages/login';
 import CakeDetails from './pages/cake-details';
 
