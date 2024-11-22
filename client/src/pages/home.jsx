@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+const apiURl = 'http://localhost:5000/api';
 
 export default function Home() {
 
@@ -14,7 +15,7 @@ export default function Home() {
     return (
         <>
             <h1>Home</h1>
-            <h2>{data && <p>{data.message}</p>}</h2>
+            <h2>{data && data.message ? <p>{data.message}</p> : 'Loading...'}</h2>
         </>
     )
 }
