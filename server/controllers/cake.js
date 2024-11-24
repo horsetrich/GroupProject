@@ -51,22 +51,27 @@ exports.updateCake = async(req, res) => {
 
         if(req.body.style != null){
             cake.style = req.body.style;
+            console.log("Changed");
         }
         
         if(req.body.cakeFlavour != null){
             cake.cakeFlavour = req.body.cakeFlavour;
+            console.log("Changed -1");
         }
 
-        if(req.frostingFlavour != null){
+        if(req.body.frostingFlavour != null){
             cake.frostingFlavour = req.body.frostingFlavour;
+            console.log("Changed -2");
         }
 
-        if(req.size != null){
+        if(req.body.size != null){
             cake.size = req.body.size;
+            console.log("Changed -3");
         }
 
-        if(req.price != null){
+        if(req.body.price != null){
             cake.price = req.body.price;
+            console.log("Changed - 4");
         }
 
         const updateCake = await cake.save();

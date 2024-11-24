@@ -6,8 +6,8 @@ import Home from './pages/home';
 import About from './pages/about';
 import Contact from './pages/contact';
 import Services from './pages/services';
-import CakesList from './pages/cale-list';
-import Register from './pages/register';
+import CakesList from './pages/cake-list';
+import Register from './register';
 import Login from './pages/login';
 import CakeDetails from './pages/cake-details';
 
@@ -51,7 +51,7 @@ function App() {
                 <Link className='nav-link' to="/services">Services</Link>
               </li>
               <li className="nav-item">
-                <Link className='nav-link' to="/projects">Projects</Link>
+                <Link className='nav-link' to="/cake">Cakes</Link>
               </li>
               <li className="nav-item">
                   <Link className='nav-link' to="/contact">Contact</Link>
@@ -89,7 +89,7 @@ function App() {
         <Route path="/about" element = {<About/>} />
         <Route path="/contact" element = {<Contact />} />
         <Route path="/services" element = {<Services />} />
-        <Route path="/cakes" element = { <CakesList />} />
+        <Route path="/cake" element = { <CakesList />} />
         <Route path="/cake-details" element = { <CakeDetails />} />
         <Route path="/cake-details/:id" element = { <CakeDetails />} />
         <Route path="/register" element = { <Register />} />

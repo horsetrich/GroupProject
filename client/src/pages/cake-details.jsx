@@ -37,7 +37,7 @@ const CakeDetails = () => {
 
                     const data = await response.json();
                     setCake({
-                        size: data.size,
+                        style: data.style,
                         cakeFlavour: data.cakeFlavour,
                         frostingFlavour: data.frostingFlavour,
                         size: data.size,
@@ -84,7 +84,7 @@ const CakeDetails = () => {
                 throw new Error('Failed to save project');
             }
 
-            navigate('/cakes');
+            navigate('/cake');
         } catch (error) {
             console.error('Error saving project', error);
         }

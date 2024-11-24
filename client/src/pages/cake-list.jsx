@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const CakeList = () => {
     const [cakes, setCakes] = useState([]);
-    const apiUrl = import.meta.env.VITE_API_URL || '/api';
+    const apiUrl = '/api';
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -56,10 +56,10 @@ const CakeList = () => {
     return (
         <div className="container mt-4">
             <h1 className="text-center">
-                Projects
+                Cakes
             </h1>
             <button className="btn btn-primary mb-3" onClick={() => navigate("/cake-details")}>
-                Create New Project
+                Create New Cake
             </button>
 
             {cakes.length > 0 ? (
@@ -71,6 +71,7 @@ const CakeList = () => {
                             <tr>Frosting</tr>
                             <tr>Size</tr>
                             <tr>Price</tr>
+                            <tr>Actions</tr>
                         </thead>
                         <tbody>
                             { cakes.map((cakes) => (
@@ -82,7 +83,7 @@ const CakeList = () => {
                                     <td>{cakes.price}</td>
                                     <td>
                                         <button className="btn btn-secondary mr-2"
-                                            onClick={() => navigate(`/cakes/${cakes._id}`)}
+                                            onClick={() => navigate(`/cake-details/${cakes._id}`)}
                                         >Update</button>
                                         <button classsName="btn btn-danger"
                                             onClick={() => handleDelete(cakes._id)}
@@ -94,7 +95,7 @@ const CakeList = () => {
                     </table>
                 </>
             ):(
-                <></>
+                <p>No cakes available</p>
             )}
         </div>
     )
