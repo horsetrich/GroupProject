@@ -63,22 +63,23 @@ const CakeList = () => {
             </button>
 
             {cakes.length > 0 ? (
-                <>
+
                     <table className="table table-striped">
                         <thead>
-                            <tr>Style</tr>
-                            <tr>Flavour</tr>
-                            <tr>Frosting</tr>
-                            <tr>Size</tr>
-                            <tr>Price</tr>
-                            <tr>Actions</tr>
+                            <tr>
+                                <th>Style</th>
+                                <th>Flavour</th>
+                                <th>Frosting</th>
+                                <th>Size</th>
+                                <th>Price</th>
+                            </tr>
                         </thead>
                         <tbody>
                             { cakes.map((cakes) => (
                                 <tr key={cakes._id}>
                                     <td>{cakes.style}</td>
-                                    <td>{cakes.flavour}</td>
-                                    <td>{cakes.frosting}</td>
+                                    <td>{cakes.cakeFlavour}</td>
+                                    <td>{cakes.frostingFlavour}</td>
                                     <td>{cakes.size}</td>
                                     <td>{cakes.price}</td>
                                     <td>
@@ -93,7 +94,7 @@ const CakeList = () => {
                             ))}
                         </tbody>
                     </table>
-                </>
+                
             ):(
                 <p>No cakes available</p>
             )}
