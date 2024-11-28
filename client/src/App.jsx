@@ -8,7 +8,7 @@ import About from './pages/about';
 import Contact from './pages/contact';
 import Services from './pages/services';
 import CakesList from './pages/cake-list';
-import Register from './register';
+import Register from './pages/register';
 import Login from './pages/login';
 import CakeDetails from './pages/cake-details';
 
@@ -39,7 +39,7 @@ function App() {
     <Router>
       <div className="App">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <Link className='navbar-brand' to="/">My Portfolio</Link>
+          <Link className='navbar-brand' to="/">Find Your Cake!</Link>
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">

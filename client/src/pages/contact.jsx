@@ -1,9 +1,8 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-const dotenv = require('dotenv');
 
 
-dotenv.config();
+
 
     const Contact = () => {
         const form = useRef();
@@ -13,8 +12,8 @@ dotenv.config();
       
         
             emailjs
-              .sendForm(process.env.EMAILJS_SERVICEID, process.env.EMAIL_TEMPLATE, form.current, {
-                publicKey: process.env.EMAILJS_PUBLICKEY,
+              .sendForm(import.meta.env.VITE_EMAILJS_SERVICEID, import.meta.env.VITE_EMAIL_TEMPLATE, form.current, {
+                publicKey: import.meta.env.VITE_EMAILJS_PUBLICKEY,
               })
               .then(
                 () => {

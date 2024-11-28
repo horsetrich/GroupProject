@@ -20,7 +20,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault(); // Prevents the default form submission
         try {
-            const response = await fetch(`${apiURL}/users/register`, {
+            const response = await fetch(`${apiURL}/usersCake/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
