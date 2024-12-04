@@ -11,8 +11,9 @@
     "start": "npm-run-all --parallel start:client start:server",
     "start:client": "npm --prefix client run dev",
     "start:server": "npm --prefix server run dev",
-    "build:client": "npm-run-all --parallel client run build",
-    "build:server": "npm-run-all --parallel server run build"
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "echo 'No build step for the client'",
+    "build:server": "echo 'No build step for the server'"
   },
   "author": "Matthew Kool",
   "license": "ISC",
