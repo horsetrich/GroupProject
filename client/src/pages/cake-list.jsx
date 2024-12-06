@@ -18,7 +18,7 @@ const CakeList = () => {
                 }
                 setCakes(data);
             } catch (error){
-                console.error(`erro fetching projects: ${error}`);
+                console.error(`error fetching projects: ${error}`);
             }
         }
 
@@ -96,10 +96,10 @@ const CakeList = () => {
                                     <td>{cakes.size}</td>
                                     <td>{cakes.price}</td>
                                     <td>
-                                        <button className="btn btn-secondary mr-2"
+                                        <button className="btn btn-secondary mr-2" style={{ backgroundColor: '#d68a7d', color: '#fff' }}
                                             onClick={() => navigate(`/cake-details/${cakes._id}`)}
                                         >Update</button>
-                                        <button classsName="btn btn-danger"
+                                        <button classsName="btn btn-danger" style={{ backgroundColor: '#d68a7d', color: '#fff' }}
                                             onClick={() => handleDelete(cakes._id)}
                                         >Delete</button>
                                     </td>

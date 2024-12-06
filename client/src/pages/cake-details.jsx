@@ -103,7 +103,7 @@ const CakeDetails = () => {
                         justifyContent: 'center',
                     }}>
                     <div className="container">
-                        <h1 className="display-4 mb-4" style={{ color: '#d68a7d' }}>Create Cakes</h1>
+                        <h1 className="display-4 mb-4" style={{ color: '#d68a7d' }}>Create Your Cake</h1>
                     </div>
                 </div>
             </div>
@@ -112,7 +112,6 @@ const CakeDetails = () => {
             <div className="row justify-content-center">
             <div className="col-md-8">
 
-            <h1 className="text-center">{id ? 'Update Cake' : ' Create Cake'}</h1>
             <form onSubmit={handleSubmit}>
                 <div className="form-group mb-4">
                     <label htmlFor="name">Style</label>
