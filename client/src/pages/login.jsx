@@ -19,7 +19,7 @@ const Login = ({setUser}) => {
     const handleSubmit = async (e) => {
         e.preventDefault(); // Prevents the default form submission
         try {
-            const response = await fetch(`${apiURL}/users/login`, {
+            const response = await fetch(`${apiURL}/usersCake/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
