@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Cake from '../assets/Cakes.jpg'
+import Cake from '../assets/Cakes.jpg';
 import CupCakes from '../assets/Cupcakes.jpg';
 import Chocolate from '../assets/Chocolate.jpg';
 import Birthday from '../assets/Birthday.jpg';
@@ -11,7 +11,6 @@ export default function Home() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        // Simulated API call
         const fetchFeaturedProducts = () => {
             const mockData = {
                 products: [
@@ -74,8 +73,8 @@ export default function Home() {
                         <h1 className="display-4 mb-4">Delicious Cakes for Every Occasion</h1>
                         <p className="lead mb-4">From birthdays to weddings, make every celebration special with our handcrafted cakes. Custom designs available for your unique moments.</p>
                         <div className="d-flex justify-content-center gap-3">
-                            <Link to="/cake" className="btn" style={{ backgroundColor: '#FFB6C1', color: '#fff' }}>Browse Products</Link>
-                            <Link to="/contact" className="btn btn-outline-light">Custom Orders</Link>
+                            <Link to="/cake" className="btn" style={{ backgroundColor: '#d68a7d', color: '#fff' }}>Browse Products</Link>
+                            <Link to="/contact" className="btn" style={{ backgroundColor: '#d68a7d', color: '#fff' }}>Custom Orders</Link>
                         </div>
                     </div>
                 </div>
@@ -83,7 +82,7 @@ export default function Home() {
 
             {/* Why Choose Us Section */}
             <div className="container my-5">
-                <h2 className="text-center mb-4">Why Choose Us</h2>
+                <h2 className="text-center mb-4" style={{ color: '#d68a7d' }}>Why Choose Us</h2>
                 <p className="text-center text-muted mb-5">We take pride in delivering the best cake experience</p>
                 
                 <div className="row g-4">
@@ -129,7 +128,7 @@ export default function Home() {
             {/* Featured Products Section */}
             <div className="container mb-5">
                 <div className="d-flex justify-content-between align-items-center mb-4">
-                    <h2 className="mb-0">Featured Products</h2>
+                    <h2 className="mb-0" style={{ color: '#d68a7d' }}>Featured Products</h2>
                     <Link to="/cake" className="text-decoration-none" style={{ color: '#FFB6C1' }}>View All →</Link>
                 </div>
                 <p className="text-muted mb-4">Our most popular creations</p>
@@ -167,7 +166,7 @@ export default function Home() {
                             <p className="mb-md-0">Start customizing today.</p>
                         </div>
                         <div className="col-md-4 text-md-end">
-                            <Link to="/contact" className="btn btn-light btn-lg">Start Custom Order →</Link>
+                            <Link to="/contact" className="btn" style={{ backgroundColor: '#d68a7d', color: '#fff' }}>Start Custom Order →</Link>
                         </div>
                     </div>
                 </div>

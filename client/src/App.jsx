@@ -1,7 +1,6 @@
 import {useEffect, useState} from 'react';
 import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import emailjs from '@emailjs/browser';
 
 import Home from './pages/home';
 import About from './pages/about';
@@ -38,48 +37,55 @@ function App() {
     <>
     <Router>
       <div className="App">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <Link className='navbar-brand' to="/">Find Your Cake!</Link>
-          <div className="collapse navbar-collapse">
-            <ul className="navbar-nav mr-auto">
+        <nav className="navbar navbar-expand-lg navbar-light" style={{ background: 'linear-gradient(to right, #FFD1DC, #FFFACD)' }}>
+        <div className="container-fluid">
+          <Link className='navbar-brand' to="/" style={{ color: '#d68a7d', fontSize: '30px', fontWeight: 'normal'}}>Find Your Cake!</Link>
+
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
+
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav mx-auto">
               <li className="nav-item">
-                <Link className='nav-link' to="/">Home</Link>
+                <Link className='nav-link' to="/" style={{ color: '#d68a7d' }}>Home</Link>
               </li>
               <li className="nav-item">
-                <Link className='nav-link' to="/about">About</Link>
+                <Link className='nav-link' to="/about"style={{ color: '#d68a7d' }}>About</Link>
               </li>
               <li className="nav-item">
-                <Link className='nav-link' to="/services">Services</Link>
+                <Link className='nav-link' to="/services" style={{ color: '#d68a7d' }}>Services</Link>
               </li>
               <li className="nav-item">
-                <Link className='nav-link' to="/cake">Cakes</Link>
+                <Link className='nav-link' to="/cake" style={{ color: '#d68a7d' }}>Cakes</Link>
               </li>
               <li className="nav-item">
-                  <Link className='nav-link' to="/contact">Contact</Link>
+                  <Link className='nav-link' to="/contact" style={{ color: '#d68a7d' }}>Contact</Link>
               </li>
             </ul>
-            <ul className="navbar-nav ml-auto">
+            <ul className="navbar-nav ms-auto">
               {user ? (
                 <>
                   <li className="nav-item">
-                  <span className="navbar-text mr-3">Welcome, {user.username}</span>
+                  <span className="navbar-text mr-3" style={{ color: '#d68a7d' }}>Welcome, {user.username}</span>
                   </li>
                   <li className="nav-item">
-                    <button className="btn btn-outline secondary" onClick={handleLogout}>Logout</button>
+                    <button className="btn btn-outline-danger" onClick={handleLogout}>Logout</button>
                   </li>
                 </>
               ): (
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/register">Register</Link>
+                    <Link className="nav-link" to="/register" style={{ color: '#d68a7d' }}>Register</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/login">Login</Link>
+                    <Link className="nav-link" to="/login" style={{ color: '#d68a7d' }}>Login</Link>
                   </li>
                 </>
               )}
               
             </ul>
+          </div>
           </div>
         </nav>
       </div>
