@@ -61,7 +61,7 @@ export default function Home() {
             <div className="position-relative">
                 <div className="hero-section text-white text-center py-5" 
                      style={{
-                         background: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))',
+                         background: 'linear-gradient(to right, #FFD1DC, #FFFACD)',
                          backgroundImage: `url(${Cake})`,
                          backgroundSize: 'cover',
                          backgroundPosition: 'center',
@@ -74,8 +74,8 @@ export default function Home() {
                         <h1 className="display-4 mb-4">Delicious Cakes for Every Occasion</h1>
                         <p className="lead mb-4">From birthdays to weddings, make every celebration special with our handcrafted cakes. Custom designs available for your unique moments.</p>
                         <div className="d-flex justify-content-center gap-3">
-                            <Link to="/cake" className="btn btn-primary btn-lg">Browse Products</Link>
-                            <Link to="/contact" className="btn btn-outline-light btn-lg">Custom Orders</Link>
+                            <Link to="/cake" className="btn" style={{ backgroundColor: '#FFB6C1', color: '#fff' }}>Browse Products</Link>
+                            <Link to="/contact" className="btn btn-outline-light">Custom Orders</Link>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@ export default function Home() {
                     <div className="col-md-3">
                         <div className="text-center">
                             <div className="bg-light rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style={{width: '80px', height: '80px'}}>
-                                <i className="bi bi-cake2 fs-3"></i>
+                                <i className="bi bi-cake2 fs-3" style={{ color: '#FFB6C1' }}></i>
                             </div>
                             <h4>Custom Designs</h4>
                             <p className="text-muted">Personalize your cake for any special occasion</p>
@@ -99,7 +99,7 @@ export default function Home() {
                     <div className="col-md-3">
                         <div className="text-center">
                             <div className="bg-light rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style={{width: '80px', height: '80px'}}>
-                                <i className="bi bi-gift fs-3"></i>
+                                <i className="bi bi-gift fs-3" style={{ color: '#FFB6C1' }}></i>
                             </div>
                             <h4>Perfect Gifting</h4>
                             <p className="text-muted">Make celebrations memorable with our special cakes</p>
@@ -108,7 +108,7 @@ export default function Home() {
                     <div className="col-md-3">
                         <div className="text-center">
                             <div className="bg-light rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style={{width: '80px', height: '80px'}}>
-                                <i className="bi bi-truck fs-3"></i>
+                                <i className="bi bi-truck fs-3" style={{ color: '#FFB6C1' }}></i>
                             </div>
                             <h4>Fast Delivery</h4>
                             <p className="text-muted">Same day delivery for your last-minute celebrations</p>
@@ -117,7 +117,7 @@ export default function Home() {
                     <div className="col-md-3">
                         <div className="text-center">
                             <div className="bg-light rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style={{width: '80px', height: '80px'}}>
-                                <i className="bi bi-star fs-3"></i>
+                                <i className="bi bi-star fs-3" style={{ color: '#FFB6C1' }}></i>
                             </div>
                             <h4>Premium Quality</h4>
                             <p className="text-muted">Made with the finest ingredients for the best taste</p>
@@ -130,7 +130,7 @@ export default function Home() {
             <div className="container mb-5">
                 <div className="d-flex justify-content-between align-items-center mb-4">
                     <h2 className="mb-0">Featured Products</h2>
-                    <Link to="/cake" className="text-decoration-none">View All →</Link>
+                    <Link to="/cake" className="text-decoration-none" style={{ color: '#FFB6C1' }}>View All →</Link>
                 </div>
                 <p className="text-muted mb-4">Our most popular creations</p>
 
@@ -144,9 +144,9 @@ export default function Home() {
                     <div className="row g-4">
                         {featuredProducts.map(product => (
                             <div key={product.id} className="col-md-3">
-                                <div className="card h-100">
+                                <div className="card h-100" style={{ border: 'none' }}>
                                     <img src={product.image} className="card-img-top" alt={product.name} />
-                                    <div className="card-body">
+                                    <div className="card-body" style={{ backgroundColor: '#FFFACD' }}>
                                         <h5 className="card-title">{product.name}</h5>
                                         <p className="card-text text-muted">{product.category}</p>
                                         <p className="card-text fw-bold">${product.price}</p>
@@ -159,7 +159,7 @@ export default function Home() {
             </div>
 
             {/* Call to Action Section */}
-            <div className="bg-primary text-white py-5">
+            <div style={{ backgroundColor: '#FFB6C1', color: '#fff' }} className="py-5">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-md-8">

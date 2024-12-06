@@ -46,13 +46,6 @@ export default function About() {
     }, []);
 
     return (
-<<<<<<< HEAD
-        <div>
-        <h1>About</h1>
-        <p>Welcome to Elegant Cakes, a bakery for delicious cakes for your special occasions. We specialize in hand-crafted cakes made with the finest ingredients and a lot of love. Whether you're celebrating a special occasion or simply craving something sweet, we have got you covered.</p>
-        </div>
-    )
-=======
         <div className="container py-5">
             {/* Hero Section */}
             <div className="text-center mb-5">
@@ -165,5 +158,4 @@ export default function About() {
             </div>
         </div>
     );
->>>>>>> upstream/main
 }
