@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-export default function services() {
-    return (
-      <>
-        <p>Our Services</p>
-        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                    <h4>Cakes</h4>
-                    <hr/>
-                    <h4>Cupcakes</h4>
-                    <hr/>
-                    <h4>specialty desserts</h4>
-                    <hr/>
-                </div>
-      </>
-    );
-  }
-=======
+
 import { useState, useEffect } from 'react';
 import Cake from '../assets/Chocolate.jpg';
 import Cupcake from '../assets/Cupcakes.jpg';
@@ -120,4 +103,3 @@ export default function Services() {
         </div>
     );
 }
->>>>>>> upstream/main

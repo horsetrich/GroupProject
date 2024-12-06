@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react'
-const apiURl = 'http://localhost:3000/api';
-=======
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Cake from '../assets/Cakes.jpg'
@@ -9,34 +5,11 @@ import CupCakes from '../assets/Cupcakes.jpg';
 import Chocolate from '../assets/Chocolate.jpg';
 import Birthday from '../assets/Birthday.jpg';
 import Wedding from '../assets/WeddingCake.jpg';
->>>>>>> upstream/main
 
 export default function Home() {
     const [featuredProducts, setFeaturedProducts] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-<<<<<<< HEAD
-    const [data, setData] = useState(null);
-    //const apiUrl = '/api';
-
-    useEffect(()=>{
-        fetch(`${apiUrl}/data`)
-            .then((res) => res.json())
-            .then((dataFromServer) => {
-                console.log( 'Fetched data:' , dataFromServer);
-                setData(dataFromServer);
-            })
-            .catch((error) => console.error('Error fetching data:' , error))
-           // .then((dataFromServer) => setData(dataFromServer))
-    },[])
-
-    return (
-        <>
-            <h1>Home</h1>
-            <h2>{data && data.message ? <p>{data.message}</p> : 'Loading...'}</h2>
-        </>
-    )
-=======
     useEffect(() => {
         // Simulated API call
         const fetchFeaturedProducts = () => {
@@ -201,5 +174,4 @@ export default function Home() {
             </div>
         </div>
     );
->>>>>>> upstream/main
 }
