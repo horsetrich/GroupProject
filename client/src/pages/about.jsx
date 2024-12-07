@@ -46,12 +46,25 @@ export default function About() {
     }, []);
 
     return (
-        <div className="container py-5">
-            {/* Hero Section */}
-            <div className="text-center mb-5">
-                <h1 className="display-4 mb-3">🍰 WebWizards Cake Shop</h1>
-                <p className="lead w-75 mx-auto">Creating delicious memories since 2023</p>
+
+        <div className="container-fluid p-0">
+            <div className="position-relative">
+                <div className="hero-section text-white text-center py-5"
+                    style={{
+                        background: 'linear-gradient(to right, #FFD1DC, #FFFACD)',
+                        minHeight: '400px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}>
+                    <div className="container">
+                        <h1 className="display-4 mb-4" style={{ color: '#d68a7d' }}>🍰 WebWizards Cake Shop</h1>
+                        <p className="lead w-75 mx-auto" style={{ color: '#FFB6C1' }}>Creating delicious memories since 2023</p>
+                    </div>
+                </div>
             </div>
+
+        <div className="container py-5" style={{ fontFamily: 'Arial, sans-serif' }}>
 
             {/* Overview Section */}
             <div className="row align-items-center mb-5">
@@ -60,15 +73,16 @@ export default function About() {
                         src={Bakery}
                         alt="Bakery Interior" 
                         className="img-fluid rounded shadow"
+                        style={{ border: '5px solid #f7d5b1' }}
                     />
                 </div>
                 <div className="col-md-6">
-                    <h2 className="mb-4">Our Story</h2>
-                    <p className="lead mb-4">
+                    <h2 className="mb-4" style={{ color: '#d68a7d' }}>Our Story</h2>
+                    <p className="lead mb-4" style={{ color: '#4b4b4b' }}>
                         WebWizards Cake Shop is a comprehensive web application developed as part of 
                         COMP229 - Web Application Development course.
                     </p>
-                    <p>
+                    <p style={{ color: '#4b4b4b' }}>
                         Our platform enables customers to browse, customize, and order delicious 
                         cakes while providing our team with powerful tools for managing products 
                         and orders efficiently.
@@ -77,26 +91,29 @@ export default function About() {
             </div>
 
             {/* Mission Section */}
-            <div className="bg-light p-5 rounded mb-5">
+            <div className=" p-5 rounded mb-5" style={{ backgroundColor: '#FFB6C1'}}>
                 <div className="row">
-                    <div className="col-md-4 mb-3 mb-md-0">
-                        <h4>Our Mission</h4>
-                        <p>To deliver exceptional cake experiences through innovative web technology</p>
+                    <div className="col-md-4 mb-3 mb-md-0" style={{ backgroundColor: '#FFB6C1'}}>
+                        <br></br>
+                        <h4 style={{ color: '#d68a7d' }}>Our Mission</h4>
+                        <p style={{ color: '#4b4b4b' }}>To deliver exceptional cake experience through innovative web technology</p>
                     </div>
-                    <div className="col-md-4 mb-3 mb-md-0">
-                        <h4>Our Vision</h4>
-                        <p>Becoming the leading online platform for custom cake orders</p>
+                    <div className="col-md-4 mb-3 mb-md-0" style={{ backgroundColor: '#FFB6C1' }}>
+                    <br></br>
+                        <h4 style={{ color: '#d68a7d' }}>Our Vision</h4>
+                        <p style={{ color: '#4b4b4b' }}>Becoming the leading online platform for custom cake orders</p>
                     </div>
-                    <div className="col-md-4">
-                        <h4>Our Values</h4>
-                        <p>Quality, Innovation, Customer Satisfaction</p>
+                    <div className="col-md-4" style={{ backgroundColor: '#FFB6C1'}}>
+                    <br></br>
+                        <h4 style={{ color: '#d68a7d' }}>Our Values</h4>
+                        <p style={{ color: '#4b4b4b' }}>Quality, Innovation, Customer Satisfaction</p>
                     </div>
                 </div>
             </div>
 
             {/* Team Section */}
             <div className="mb-5">
-                <h2 className="text-center mb-5">Meet Our Team</h2>
+                <h2 className="text-center mb-5" style={{ color: '#d68a7d' }}>Meet Our Team</h2>
                 {isLoading ? (
                     <div className="text-center">
                         <div className="spinner-border" role="status">
@@ -107,17 +124,17 @@ export default function About() {
                     <div className="row g-4">
                         {teamData.map(member => (
                             <div key={member.id} className="col-md-4">
-                                <div className="card h-100 border-0 shadow-sm">
+                                <div className="card h-100 border-0 shadow-sm" style={{ borderColor: '#d68a7d' }}>
                                     <img 
                                         src={member.image} 
                                         className="card-img-top" 
                                         alt={member.name}
-                                        style={{height: '300px', objectFit: 'cover'}}
+                                        style={{height: '300px', objectFit: 'cover', borderRadius: '10px'}}
                                     />
-                                    <div className="card-body text-center">
-                                        <h5 className="card-title">{member.name}</h5>
-                                        <p className="card-text text-muted mb-2">{member.role}</p>
-                                        <p className="card-text small">{member.description}</p>
+                                    <div className="card-body text-center" style={{ backgroundColor: '#FFFACD' }}>
+                                        <h5 className="card-title" style={{ color: '#d68a7d' }}>{member.name}</h5>
+                                        <p className="card-text text-muted mb-2" style={{ color: '#4b4b4b' }}>{member.role}</p>
+                                        <p className="card-text small" style={{ color: '#4b4b4b' }}>{member.description}</p>
                                     </div>
                                 </div>
                             </div>
@@ -128,34 +145,35 @@ export default function About() {
 
             {/* Technologies Section */}
             <div className="text-center">
-                <h3 className="mb-4">Technologies Used</h3>
+                <h3 className="mb-4" style={{ color: '#d68a7d' }}>Technologies Used</h3>
                 <div className="row g-4 justify-content-center">
-                    <div className="col-6 col-md-2">
-                        <div className="p-3 bg-light rounded">
-                            <i className="bi bi-react fs-2"></i>
-                            <p className="mb-0">React</p>
+                    <div className="col-6 col-md-2" >
+                        <div className="p-3 rounded" style={{ backgroundColor: '#FFFACD' }}>
+                            <i className="bi bi-react fs-2" ></i>
+                            <p className="mb-0" style={{ color: '#d68a7d' }}>React</p>
                         </div>
                     </div>
                     <div className="col-6 col-md-2">
-                        <div className="p-3 bg-light rounded">
+                        <div className="p-3 rounded" style={{ backgroundColor: '#FFFACD' }}>
                             <i className="bi bi-bootstrap fs-2"></i>
-                            <p className="mb-0">Bootstrap</p>
+                            <p className="mb-0" style={{ color: '#d68a7d' }}>Bootstrap</p>
                         </div>
                     </div>
                     <div className="col-6 col-md-2">
-                        <div className="p-3 bg-light rounded">
+                        <div className="p-3 rounded" style={{ backgroundColor: '#FFFACD' }}>
                             <i className="bi bi-database fs-2"></i>
-                            <p className="mb-0">MongoDB</p>
+                            <p className="mb-0" style={{ color: '#d68a7d' }}>MongoDB</p>
                         </div>
                     </div>
                     <div className="col-6 col-md-2">
-                        <div className="p-3 bg-light rounded">
+                        <div className="p-3 rounded" style={{ backgroundColor: '#FFFACD' }}>
                             <i className="bi bi-node-plus fs-2"></i>
-                            <p className="mb-0">Node.js</p>
+                            <p className="mb-0" style={{ color: '#d68a7d' }}>Node.js</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

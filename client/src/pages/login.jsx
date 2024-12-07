@@ -43,12 +43,28 @@ const Login = ({setUser}) => {
     }
 
     return (
-        <div className="contaier mt-4">
-            <h1 className="text-center">Login</h1>
+        <div className="container-fluid p-0">
+            <div className="position-relative">
+                <div className="hero-section text-white text-center py-5"
+                    style={{
+                        background: 'linear-gradient(to right, #FFD1DC, #FFFACD)',
+                        minHeight: '400px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}>
+                    <div className="container">
+                        <h1 className="display-4 mb-4" style={{ color: '#d68a7d' }}>Login</h1>
+                    </div>
+                </div>
+            </div>
+            <div className="container my-5">
+            <div className="row justify-content-center">
+            <div className="col-md-8">
             {error && <div className="alert alert-danger">{error}</div>}
             <form onSubmit={handleSubmit}>
                 
-                <div className="form-group">
+                <div className="form-group mb-4">
                     <label htmlFor="email">Email</label>
                     <input type="text" 
                         className="form-control" 
@@ -59,7 +75,7 @@ const Login = ({setUser}) => {
                         required
                         />
                 </div>
-                <div className="form-group">
+                <div className="form-group mb-4">
                     <label htmlFor="password">Password</label>
                     <input type="password" 
                         className="form-control" 
@@ -70,8 +86,13 @@ const Login = ({setUser}) => {
                         required
                         />
                 </div>
-                <button type="submit" className="btn btn-primary">Login</button>
+                <div className="text-center">
+            <button type="submit" class="btn" style={{ backgroundColor: '#d68a7d', color: '#fff' }} value="Send">Login</button>
+          </div>
             </form>
+        </div>
+        </div>
+        </div>
         </div>
     )
 

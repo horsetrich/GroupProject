@@ -37,6 +37,7 @@ const CakeDetails = () => {
 
                     const data = await response.json();
                     setCake({
+
                         style: data.style,
                         cakeFlavour: data.cakeFlavour,
                         frostingFlavour: data.frostingFlavour,
@@ -91,10 +92,28 @@ const CakeDetails = () => {
     }
 
     return (
-        <div className="container mt-4">
-            <h1 className="text-center">{id ? 'Update Cake' : ' Create Cake'}</h1>
+        <div className="container-fluid p-0">
+            <div className="position-relative">
+                <div className="hero-section text-white text-center py-5"
+                    style={{
+                        background: 'linear-gradient(to right, #FFD1DC, #FFFACD)',
+                        minHeight: '400px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}>
+                    <div className="container">
+                        <h1 className="display-4 mb-4" style={{ color: '#d68a7d' }}>Create Your Cake</h1>
+                    </div>
+                </div>
+            </div>
+
+        <div className="container my-5">
+            <div className="row justify-content-center">
+            <div className="col-md-8">
+
             <form onSubmit={handleSubmit}>
-                <div className="form-group">
+                <div className="form-group mb-4">
                     <label htmlFor="name">Style</label>
                     <input type="text"
                         id="style"
@@ -105,7 +124,7 @@ const CakeDetails = () => {
                         required
                         />
                 </div>
-                <div className="form-group">
+                <div className="form-group mb-4">
                     <label htmlFor="cakeFlavour">Batter Flavour</label>
                     <input type="text"
                         id="cakeFlavour"
@@ -116,7 +135,7 @@ const CakeDetails = () => {
                         required
                         />
                 </div>
-                <div className="form-group">
+                <div className="form-group mb-4">
                     <label htmlFor="frostingFlavour">Frosting Flavour</label>
                     <input type="text"
                         id="frostingFlavour"
@@ -127,7 +146,7 @@ const CakeDetails = () => {
                         required
                         />
                 </div>
-                <div className="form-group">
+                <div className="form-group mb-4">
                     <label htmlFor="size">Size</label>
                     <input type="text"
                         id="size"
@@ -138,7 +157,7 @@ const CakeDetails = () => {
                         required
                         />
                 </div>
-                <div className="form-group">
+                <div className="form-group mb-4">
                     <label htmlFor="price">Price</label>
                     <input type="text"
                         id="price"
@@ -149,10 +168,15 @@ const CakeDetails = () => {
                         required
                         />
                 </div>
-                <button type="submit" className="btn btn-primary">
+                <div className="text-center">
+                <button type="submit" className="btn" style={{ backgroundColor: '#d68a7d', color: '#fff' }}>
                     {id? 'Update': 'Create'}
                 </button>
+                </div>
             </form>
+        </div>
+        </div>
+        </div>
         </div>
     )
 

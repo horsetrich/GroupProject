@@ -18,7 +18,7 @@ const CakeList = () => {
                 }
                 setCakes(data);
             } catch (error){
-                console.error(`erro fetching projects: ${error}`);
+                console.error(`error fetching projects: ${error}`);
             }
         }
 
@@ -54,11 +54,24 @@ const CakeList = () => {
     }
     
     return (
+        <div className="container-fluid p-0">
+            <div className="position-relative">
+                <div className="hero-section text-white text-center py-5"
+                    style={{
+                        background: 'linear-gradient(to right, #FFD1DC, #FFFACD)',
+                        minHeight: '400px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}>
+                    <div className="container">
+                        <h1 className="display-4 mb-4" style={{ color: '#d68a7d' }}>Cakes</h1>
+                    </div>
+                </div>
+            </div>
+
         <div className="container mt-4">
-            <h1 className="text-center">
-                Cakes
-            </h1>
-            <button className="btn btn-primary mb-3" onClick={() => navigate("/cake-details")}>
+            <button className="btn" style={{ backgroundColor: '#d68a7d', color: '#fff' }} onClick={() => navigate("/cake-details")}>
                 Create New Cake
             </button>
 
@@ -83,10 +96,10 @@ const CakeList = () => {
                                     <td>{cakes.size}</td>
                                     <td>{cakes.price}</td>
                                     <td>
-                                        <button className="btn btn-secondary mr-2"
+                                        <button className="btn btn-secondary mr-2" style={{ backgroundColor: '#d68a7d', color: '#fff' }}
                                             onClick={() => navigate(`/cake-details/${cakes._id}`)}
                                         >Update</button>
-                                        <button classsName="btn btn-danger"
+                                        <button classsName="btn btn-danger" style={{ backgroundColor: '#d68a7d', color: '#fff' }}
                                             onClick={() => handleDelete(cakes._id)}
                                         >Delete</button>
                                     </td>
@@ -98,6 +111,7 @@ const CakeList = () => {
             ):(
                 <p>No cakes available</p>
             )}
+        </div>
         </div>
     )
 }
